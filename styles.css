@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+video {
+  border: 1px solid lightgray;
+  width: 100%;
+  background-color: #eee;
+}

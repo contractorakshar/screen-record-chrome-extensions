@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpequiv="" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1"
+    />
+    <meta name="theme-color" content="#000" />
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+      "
+    >
+      <button type="button" class="btn btn-success" id="start">Start</button>
+      <button id="pause" class="btn btn-secondary">Pause</button>
+      <button id="resume" class="btn btn-warning">Resume</button>
+      <button type="button" class="btn btn-danger" id="stop">Stop</button>
+      <span id="err" style="display: none">Getting media</span>
+    </div>
+    <video autoplay controls />
+
+    <script type="text/javascript" src="common.js" defer></script>
+  </body>
+</html>
