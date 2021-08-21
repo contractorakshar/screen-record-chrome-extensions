@@ -1,15 +1,16 @@
 {
   "version": "1",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "screen record",
   "background": {
-    "scripts": ["./background.js"]
+    "service_worker": "background.js"
   },
-  "browser_action": {
-    "default_icon": "helloicon.png"
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self'"
   },
-  "content_security_policy": "script-src 'self' ; object-src 'self'",
-
   "description": "screen record",
-  "permissions": ["desktopCapture"]
+  "permissions": ["desktopCapture"],
+  "action": {
+    "default_icon": "helloicon.png"
+  }
 }

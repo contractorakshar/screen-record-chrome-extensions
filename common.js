@@ -7,6 +7,7 @@ const video = document.querySelector('video');
 
 const startRecording = async () => {
   stream = await navigator.mediaDevices.getDisplayMedia({
+    audio: true,
     video: { mediaSource: 'screen' },
   });
   recorder = new MediaRecorder(stream);
@@ -28,7 +29,6 @@ stopbtn.addEventListener('click', () => {
   if (recorder.state !== 'inactive') {
     recorder.stop();
   }
-  err.style.display = 'none';
 });
 
 pause.addEventListener('click', () => {
